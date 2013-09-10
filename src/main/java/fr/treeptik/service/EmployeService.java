@@ -10,4 +10,6 @@ public interface EmployeService {
 	void register(Employe employe) throws ServiceException;
 	List<Employe> findAll() throws ServiceException;
 	void remove(Integer id) throws ServiceException;
+	Employe update(Employe employe) throws ServiceException;
+	
 }

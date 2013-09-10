@@ -12,4 +12,6 @@ public interface GenericDAO<T, PK> {
 	void remove(PK id) throws DAOException;
 
 	List<T> findAll() throws DAOException;
+	
+	T update(T entity) throws DAOException;
 }

@@ -9,6 +9,8 @@
 		<h1> Employees Create</h1>
 		<br />
 		<h:form class="form-horizontal">
+		<h:inputHidden value="#{employeMB.employe.id}" />
+		
 			
 			<div class="form-group">
 				<h:outputLabel for="nom" value="Last name : " styleClass="col-lg-2 control-label"/>
@@ -48,7 +50,7 @@
 			
 			<div class="form-group">
 				<div class="col-lg-offset-2 col-lg-6">
-					<h:commandButton id="create" value="Add" action="#{employeMB.register}" ajax="false" styleClass="btn btn-primary" />
+					<h:commandButton id="modify" value="Modify" action="#{employeMB.update}" ajax="false" styleClass="btn btn-primary" />
 				</div>
 			</div>
 			

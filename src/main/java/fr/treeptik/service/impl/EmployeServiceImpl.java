@@ -51,4 +51,14 @@ public class EmployeServiceImpl implements EmployeService {
 		}
 		
 	}
+
+	@Override
+	public Employe update(Employe employe) throws ServiceException {
+		try {
+			log.info("Updating " + employe.getNom());
+			return dao.update(employe);
+		} catch (DAOException e) {
+			throw new ServiceException(e.getMessage(), e.getCause());
+		}
+	}
 }

@@ -8,9 +8,10 @@
 	<ui:define name="body">
 	
 	<div class="container">
-
+<h1>Employees Create</h1>
+		<br />
 			<h:form>
-				<h:dataTable id="employees" var="emp" value="#{employeMB.listDataModel}" styleClass="table table-striped">
+				<h:dataTable id="employees" var="emp" value="#{employeMB.listDataModel}" styleClass="table table-striped table-hover">
 					<h:column>
 						<f:facet name="header">
 							<h:outputText value="ID" />
@@ -19,13 +20,13 @@
 					</h:column>
 					<h:column>
 						<f:facet name="header">
-							<h:outputText value="Noms" />
+							<h:outputText value="Last name" />
 						</f:facet>
 						<h:outputText value="#{emp.nom}" />
 					</h:column>
 					<h:column>
 						<f:facet name="header">
-							<h:outputText  value="Prenom" />
+							<h:outputText  value="First Name" />
 						</f:facet>
 						<h:outputText value="#{emp.prenom}" />
 					</h:column>
@@ -48,10 +49,10 @@
 							<h:outputText value="Action" />
 						</f:facet>
 
- 						<h:commandLink action="#"
-							value="Modifier" styleClass="btn btn-primary"/> 
+ 						<h:commandLink action="#{employeMB.initUpdate}"
+							value="Modify" styleClass="btn btn-primary"/> 
 						<h:commandLink action="#{employeMB.remove}"
-							value="Supprimer" styleClass="btn btn-danger" />
+							value="Delete" styleClass="btn btn-danger" />
 					</h:column>
 				</h:dataTable>
 			</h:form>
