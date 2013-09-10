@@ -2,8 +2,7 @@ package fr.treeptik.dao;
 
 import fr.treeptik.model.Employe;
 
-public interface EmployeDAO {
+public interface EmployeDAO extends GenericDAO<Employe, Integer>{
 
-	void register(Employe employe) throws Exception;
 
 }

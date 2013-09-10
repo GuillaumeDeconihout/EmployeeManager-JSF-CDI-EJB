@@ -1,0 +1,60 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	template="/templates/default.xhtml">
+
+	<ui:define name="body">
+	
+	<div class="container">
+
+			<h:form>
+				<h:dataTable id="employees" var="emp" value="#{employeMB.listDataModel}" styleClass="table table-striped">
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="ID" />
+						</f:facet>
+						<h:outputText value="#{emp.id}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Noms" />
+						</f:facet>
+						<h:outputText value="#{emp.nom}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText  value="Prenom" />
+						</f:facet>
+						<h:outputText value="#{emp.prenom}" />
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText  value="Login" />
+						</f:facet>
+						<h:outputText value="#{emp.login}">
+						</h:outputText>
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText  value="Password" />
+						</f:facet>
+						<h:outputText value="#{emp.password}">
+						</h:outputText>
+					</h:column>
+					<h:column>
+						<f:facet name="header">
+							<h:outputText value="Action" />
+						</f:facet>
+
+ 						<h:commandLink action="#"
+							value="Modifier" styleClass="btn btn-primary"/> 
+						<h:commandLink action="#{employeMB.remove}"
+							value="Supprimer" styleClass="btn btn-danger" />
+					</h:column>
+				</h:dataTable>
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>
