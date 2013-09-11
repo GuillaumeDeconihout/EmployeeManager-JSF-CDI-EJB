@@ -47,20 +47,19 @@ public class EmployeManagedBean {
 		employeService.remove(employe.getId());
 		initListDataModel();
 		return "list";
-	}	
-	
+	}
+
 	public String initUpdate() {
 		employe = listDataModel.getRowData();
 		return "modify";
 	}
-	
+
 	public String update() throws Exception {
 		employeService.update(employe);
 		initListDataModel();
 		return "list-voitures";
 	}
 
-	
 	public Employe getEmploye() {
 		return employe;
 	}
