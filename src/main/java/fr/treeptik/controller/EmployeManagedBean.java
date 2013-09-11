@@ -35,6 +35,8 @@ public class EmployeManagedBean {
 					"Registered!", "Registration successful");
 			facesContext.addMessage(null, m);
 			init();
+		
+			
 		} catch (Exception e) {
 			FacesMessage m = new FacesMessage(FacesMessage.SEVERITY_ERROR,
 					e.getLocalizedMessage(), "Registration unsuccessful");
